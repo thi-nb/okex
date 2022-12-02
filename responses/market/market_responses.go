@@ -1,7 +1,7 @@
 package market
 
 import (
-	"github.com/thi-nb/okex/okex/responses"
+	"github.com/thi-nb/okex/responses"
 )
 
 type (

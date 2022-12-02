@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/thi-nb/okex/okex"
-	requests "github.com/thi-nb/okex/okex/requests/rest/subaccount"
-	responses "github.com/thi-nb/okex/okex/responses/sub_account"
+	"github.com/thi-nb/okex"
+	requests "github.com/thi-nb/okex/requests/rest/subaccount"
+	responses "github.com/thi-nb/okex/responses/sub_account"
 )
 
 // SubAccount

@@ -1,4 +1,4 @@
-module github.com/thi-nb/okex/okex
+module github.com/thi-nb/okex
 
 go 1.17
 

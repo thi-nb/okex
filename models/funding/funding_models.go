@@ -1,6 +1,6 @@
 package funding
 
-import "github.com/thi-nb/okex/okex"
+import "github.com/thi-nb/okex"
 
 type (
 	Currency struct {

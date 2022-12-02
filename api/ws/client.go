@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/thi-nb/okex/okex"
-	"github.com/thi-nb/okex/okex/events"
+	"github.com/thi-nb/okex"
+	"github.com/thi-nb/okex/events"
 
 	"github.com/gorilla/websocket"
 )

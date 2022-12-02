@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 
-	"github.com/thi-nb/okex/okex"
-	"github.com/thi-nb/okex/okex/api/rest"
-	"github.com/thi-nb/okex/okex/api/ws"
+	"github.com/thi-nb/okex"
+	"github.com/thi-nb/okex/api/rest"
+	"github.com/thi-nb/okex/api/ws"
 )
 
 // Client is the main api wrapper of okex

@@ -1,7 +1,7 @@
 package public_data
 
 import (
-	"github.com/thi-nb/okex/okex/models/publicdata"
+	"github.com/thi-nb/okex/models/publicdata"
 )
 
 type (

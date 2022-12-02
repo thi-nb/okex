@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/thi-nb/okex/okex"
-	requests "github.com/thi-nb/okex/okex/requests/rest/public"
-	responses "github.com/thi-nb/okex/okex/responses/public_data"
+	"github.com/thi-nb/okex"
+	requests "github.com/thi-nb/okex/requests/rest/public"
+	responses "github.com/thi-nb/okex/responses/public_data"
 )
 
 // PublicData

@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/thi-nb/okex/okex"
-	requests "github.com/thi-nb/okex/okex/requests/rest/market"
-	responses "github.com/thi-nb/okex/okex/responses/market"
+	"github.com/thi-nb/okex"
+	requests "github.com/thi-nb/okex/requests/rest/market"
+	responses "github.com/thi-nb/okex/responses/market"
 )
 
 // Market

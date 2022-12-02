@@ -1,8 +1,8 @@
 package trade
 
 import (
-	"github.com/thi-nb/okex/okex/models/trade"
-	"github.com/thi-nb/okex/okex/responses"
+	"github.com/thi-nb/okex/models/trade"
+	"github.com/thi-nb/okex/responses"
 )
 
 type (

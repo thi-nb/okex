@@ -3,7 +3,7 @@ package events
 import (
 	"encoding/json"
 
-	"github.com/thi-nb/okex/okex"
+	"github.com/thi-nb/okex"
 )
 
 type (

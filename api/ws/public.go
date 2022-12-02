@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/thi-nb/okex/okex"
-	"github.com/thi-nb/okex/okex/events"
-	"github.com/thi-nb/okex/okex/events/public"
-	requests "github.com/thi-nb/okex/okex/requests/ws/public"
+	"github.com/thi-nb/okex"
+	"github.com/thi-nb/okex/events"
+	"github.com/thi-nb/okex/events/public"
+	requests "github.com/thi-nb/okex/requests/ws/public"
 )
 
 // Public

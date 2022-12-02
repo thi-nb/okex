@@ -3,11 +3,12 @@ package ws
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/amir-the-h/okex"
-	"github.com/amir-the-h/okex/events"
-	"github.com/amir-the-h/okex/events/public"
-	requests "github.com/amir-the-h/okex/requests/ws/public"
 	"strings"
+
+	"github.com/thi-nb/okex/okex"
+	"github.com/thi-nb/okex/okex/events"
+	"github.com/thi-nb/okex/okex/events/public"
+	requests "github.com/thi-nb/okex/okex/requests/ws/public"
 )
 
 // Public
@@ -438,7 +439,8 @@ func (c *Public) Process(data []byte, e *events.Basic) bool {
 				c.StructuredEventChan <- e
 			}()
 			return true
-		case "mark-price":
+		case "market-price":
+			fmt.Println("aaoooddd")
 			e := public.MarkPrice{}
 			err := json.Unmarshal(data, &e)
 			if err != nil {

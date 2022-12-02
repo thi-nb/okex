@@ -59,11 +59,11 @@ type (
 
 const (
 	RestURL      = BaseURL("https://www.okx.com")
-	PublicWsURL  = BaseURL("wss://ws.okx.com:8443/ws/v5/public")
+	PublicWsURL  = BaseURL("wss://ws.okx.com/ws/v5/public")
 	PrivateWsURL = BaseURL("wss://ws.okx.com:8443/ws/v5/private")
 
 	AwsRestURL      = BaseURL("https://aws.okx.com")
-	AwsPublicWsURL  = BaseURL("wss://wsaws.okx.com:8443/ws/v5/public")
+	AwsPublicWsURL  = BaseURL("wss://wsaws.okx.com/ws/v5/public")
 	AwsPrivateWsURL = BaseURL("wss://wsaws.okx.com:8443/ws/v5/private")
 
 	DemoRestURL      = BaseURL("https://www.okx.com")

@@ -7,12 +7,14 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"github.com/amir-the-h/okex"
-	"github.com/amir-the-h/okex/events"
-	"github.com/gorilla/websocket"
 	"net/http"
 	"sync"
 	"time"
+
+	"github.com/thi-nb/okex/okex"
+	"github.com/thi-nb/okex/okex/events"
+
+	"github.com/gorilla/websocket"
 )
 
 // ClientWs is the websocket api client
@@ -97,6 +99,7 @@ func (c *ClientWs) Connect(p bool) error {
 			if err == nil {
 				return nil
 			}
+			fmt.Printf("err %+v\n", err)
 		case <-c.ctx.Done():
 			return c.handleCancel("connect")
 		}
@@ -182,7 +185,6 @@ func (c *ClientWs) Send(p bool, op okex.Operation, args []map[string]string, ext
 			return err
 		}
 	}
-
 	data := map[string]interface{}{
 		"op":   op,
 		"args": args,
@@ -353,6 +355,7 @@ func (c *ClientWs) handleCancel(msg string) error {
 
 // TODO: break each case into a separate function
 func (c *ClientWs) process(data []byte, e *events.Basic) bool {
+	fmt.Printf("event %v\n", e.Event)
 	switch e.Event {
 	case "error":
 		e := events.Error{}

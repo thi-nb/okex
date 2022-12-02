@@ -2,10 +2,11 @@ package rest
 
 import (
 	"encoding/json"
-	"github.com/amir-the-h/okex"
-	requests "github.com/amir-the-h/okex/requests/rest/public"
-	responses "github.com/amir-the-h/okex/responses/public_data"
 	"net/http"
+
+	"github.com/thi-nb/okex/okex"
+	requests "github.com/thi-nb/okex/okex/requests/rest/public"
+	responses "github.com/thi-nb/okex/okex/responses/public_data"
 )
 
 // PublicData
@@ -31,6 +32,7 @@ func (c *PublicData) GetInstruments(req requests.GetInstruments) (response respo
 	if err != nil {
 		return
 	}
+	//fmt.Printf("%+v\n", res.Body)
 	defer res.Body.Close()
 	d := json.NewDecoder(res.Body)
 	err = d.Decode(&response)

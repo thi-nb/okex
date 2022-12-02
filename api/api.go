@@ -1,10 +1,11 @@
-package api
+package main
 
 import (
 	"context"
-	"github.com/amir-the-h/okex"
-	"github.com/amir-the-h/okex/api/rest"
-	"github.com/amir-the-h/okex/api/ws"
+
+	"github.com/thi-nb/okex/okex"
+	"github.com/thi-nb/okex/okex/api/rest"
+	"github.com/thi-nb/okex/okex/api/ws"
 )
 
 // Client is the main api wrapper of okex
@@ -35,3 +36,39 @@ func NewClient(ctx context.Context, apiKey, secretKey, passphrase string, destin
 
 	return &Client{r, c, ctx}, nil
 }
+
+// func main() {
+// 	apiKey := "e4a22e10-d653-4e5c-952e-72e03eb388c0"
+// 	secretKey := "DBF20D80E12D82FF9E7EDF0B82AE7C4E"
+// 	passphrase := "BYD7B88dyVkTQyh@"
+// 	dest := okex.NormalServer
+// 	cli, err := NewClient(context.Background(), apiKey, secretKey, passphrase, dest)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	r, err := cli.Rest.Market.GetCandlesticks(market.GetCandlesticks{
+// 		InstID: "BTC-USDT",
+// 		Bar:    okex.Bar1H,
+// 		Limit:  168,
+// 	})
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	//fmt.Printf("kline: %+v\n", r)
+// 	for _, candle := range r.Candles {
+// 		fmt.Printf("open %+v\n", candle)
+// 	}
+// 	//r,err := cli.Rest.PublicData.GetInstruments()
+// 	pCh := make(chan *event_public.MarkPriceCandlesticks)
+// 	cli.Ws.Public.MarkPriceCandlesticks(ws_public.MarkPriceCandlesticks{
+// 		InstID:  "BTC-USDT",
+// 		Channel: okex.CandleStick1H,
+// 	}, pCh)
+
+// 	for {
+// 		select {
+// 		case p := <-pCh:
+// 			fmt.Printf("price %+v\n", p.Prices)
+// 		}
+// 	}
+// }

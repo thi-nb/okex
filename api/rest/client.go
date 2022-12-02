@@ -7,12 +7,13 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"github.com/amir-the-h/okex"
-	requests "github.com/amir-the-h/okex/requests/rest/public"
-	responses "github.com/amir-the-h/okex/responses/public_data"
 	"net/http"
 	"strings"
 	"time"
+
+	"github.com/thi-nb/okex/okex"
+	requests "github.com/thi-nb/okex/okex/requests/rest/public"
+	responses "github.com/thi-nb/okex/okex/responses/public_data"
 )
 
 // ClientRest is the rest api client
@@ -55,6 +56,7 @@ func NewClient(apiKey, secretKey, passphrase string, baseURL okex.BaseURL, desti
 // Do the http request to the server
 func (c *ClientRest) Do(method, path string, private bool, params ...map[string]string) (*http.Response, error) {
 	u := fmt.Sprintf("%s%s", c.baseURL, path)
+	//fmt.Printf("url %s\n", u)
 	var (
 		r    *http.Request
 		err  error
@@ -76,6 +78,7 @@ func (c *ClientRest) Do(method, path string, private bool, params ...map[string]
 			if len(params[0]) > 0 {
 				path += "?" + r.URL.RawQuery
 			}
+			//fmt.Printf("path %s\n", path)
 		}
 	} else {
 		j, err = json.Marshal(params[0])
@@ -105,6 +108,7 @@ func (c *ClientRest) Do(method, path string, private bool, params ...map[string]
 	if c.destination == okex.DemoServer {
 		r.Header.Add("x-simulated-trading", "1")
 	}
+	fmt.Printf("path %s\n", r.URL)
 	return c.client.Do(r)
 }
 

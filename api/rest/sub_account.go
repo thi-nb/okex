@@ -2,11 +2,12 @@ package rest
 
 import (
 	"encoding/json"
-	"github.com/amir-the-h/okex"
-	requests "github.com/amir-the-h/okex/requests/rest/subaccount"
-	responses "github.com/amir-the-h/okex/responses/sub_account"
 	"net/http"
 	"strings"
+
+	"github.com/thi-nb/okex/okex"
+	requests "github.com/thi-nb/okex/okex/requests/rest/subaccount"
+	responses "github.com/thi-nb/okex/okex/responses/sub_account"
 )
 
 // SubAccount

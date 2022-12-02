@@ -1,9 +1,9 @@
 package public
 
 import (
-	"github.com/amir-the-h/okex/events"
-	"github.com/amir-the-h/okex/models/market"
-	"github.com/amir-the-h/okex/models/publicdata"
+	"github.com/thi-nb/okex/okex/events"
+	"github.com/thi-nb/okex/okex/models/market"
+	"github.com/thi-nb/okex/okex/models/publicdata"
 )
 
 type (
@@ -36,8 +36,8 @@ type (
 		Prices []*publicdata.MarkPrice `json:"data"`
 	}
 	MarkPriceCandlesticks struct {
-		Arg    *events.Argument      `json:"arg"`
-		Prices []*market.IndexCandle `json:"data"`
+		Arg    *events.Argument `json:"arg"`
+		Prices [][]string       `json:"data"`
 	}
 	PriceLimit struct {
 		Arg   *events.Argument         `json:"arg"`

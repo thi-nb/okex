@@ -1,6 +1,6 @@
 package account
 
-import "github.com/amir-the-h/okex"
+import "github.com/thi-nb/okex/okex"
 
 type (
 	GetBalance struct {
